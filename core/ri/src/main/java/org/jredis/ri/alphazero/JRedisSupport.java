@@ -1099,8 +1099,9 @@ public abstract class JRedisSupport implements JRedis {
 	// this isn't cooked yet -- lets think more about the implications...
 	// 
 	static final private Map<String, byte[]>	keyByteCache = new HashMap<String, byte[]>();
-	public static final boolean	CacheKeys	= true;
-	
+	//public static final boolean	CacheKeys	= true;
+	public static final boolean	CacheKeys	= false;
+
 	private byte[] getKeyBytes(String key) throws IllegalArgumentException {
 		if(null == key) throw new IllegalArgumentException("key is null");
 		byte[] bytes = null;
